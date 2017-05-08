@@ -1,0 +1,15 @@
+<div layout="row" layout-align="center">
+  <md-card flex="80">
+    <md-card-title class="text-caps">{{category}}</md-card-title>
+    <md-divider></md-divider>
+    <md-card-content>
+      <md-list>
+        <md-list-item *ngFor="let listing of listings" (click)="listingDetail(listing)">
+          <img md-list-avatar src="{{listing.img}}" alt>
+          <h3 md-line class="text-caps"> {{listing.title}} </h3>
+          <p md-line> {{listing.price | currency:'USD':true:'1.2-2'}} {{listing.$key}}</p>
+        </md-list-item>
+      </md-list>
+    </md-card-content>
+  </md-card>
+</div>

@@ -1,0 +1,29 @@
+<form [formGroup]="listingForm">
+  <div layout="row" layout-margin layout-align="space-between center">
+    <md-input-container flex>
+      <input type="text" mdInput placeholder="Title" formControlName="title">
+    </md-input-container>
+    <md-select flex placeholder="Category" formControlName="category">
+      <md-option *ngFor="let category of categories" [value]="category">{{category}}</md-option>
+    </md-select>
+  </div>
+  <div layout="row" layout-margin layout-align="space-between center">
+    <md-input-container flex>
+      <textarea mdInput placeholder="Description" formControlName="description"></textarea>
+    </md-input-container>
+  </div>
+  <div layout="row" layout-margin layout-align="space-between center">
+    <md-input-container flex>
+      <input type="text" mdInput placeholder="Image" formControlName="img">
+    </md-input-container>
+    <md-input-container flex>
+      <input type="text" mdInput placeholder="Location" formControlName="location">
+    </md-input-container>
+    <md-input-container flex>
+      <input type="number" mdInput placeholder="Price" formControlName="price">
+    </md-input-container>
+  </div>
+  <div layout="row" layout-margin layout-align="center center">
+    <button flex='70' md-raised-button color="accent" class="text-upper" (click)="addListing()">Add Listing</button>
+  </div>
+</form>
