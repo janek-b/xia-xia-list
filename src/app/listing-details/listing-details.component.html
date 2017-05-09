@@ -1,13 +1,13 @@
 <div layout="row" layout-align="center">
   <md-card flex="80">
     <md-card-header>
-      <md-card-title class="text-caps">{{listing.title}}</md-card-title>
-      <md-card-subtitle class="text-caps">{{listing.price | currency:'USD':true:'1.2-2'}}</md-card-subtitle>
+      <md-card-title class="text-caps">{{listing?.title}}</md-card-title>
+      <md-card-subtitle class="text-caps">{{listing?.price | currency:'USD':true:'1.2-2'}}</md-card-subtitle>
     </md-card-header>
-    <img md-card-image src="{{listing.img}}">
+    <img md-card-image src="{{listing?.img}}">
     <md-card-content>
-      <p>{{listing.description}}</p>
-      <p>{{listing.location}}</p>
+      <p>{{listing?.description}}</p>
+      <p>{{listing?.location}}</p>
     </md-card-content>
   </md-card>
 </div>
